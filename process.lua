@@ -42,7 +42,7 @@ Handlers.add(
     local priceData = json.decode(msg.Data)
     table.insert(Storage, priceData)
     -- The only place where subscribers are notified
-    Subscribable.notifyTopic('price-update', priceData, msg.Timestamp)
+    Subscribable.notifyTopic('prices-update', priceData, msg.Timestamp)
   end
 )
 
